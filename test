@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bible Treasure Reveal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #treasure {
+      display: none;
+      margin-top: 20px;
+    }
+    img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🕊️ Bible Treasure Quiz</h2>
+  <p>“Who built the ark?”</p>
+  <input type="text" id="answer" placeholder="Your answer">
+  <button onclick="revealTreasure()">Submit</button>
+
+  <div id="treasure">
+    <h3>🎉 Correct!</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Ark_Encounter_5.jpg" alt="Ark Image">
+    <p>Genesis 6:14 — “So make yourself an ark of cypress wood…”</p>
+  </div>
+
+  <script>
+    function revealTreasure() {
+      const input = document.getElementById("answer").value.trim().toLowerCase();
+      if (input === "noah") {
+        document.getElementById("treasure").style.display = "block";
+      } else {
+        alert("Try again!");
+      }
+    }
+  </script>
+
+</body>
+</html>
